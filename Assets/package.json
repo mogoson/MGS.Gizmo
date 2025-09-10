@@ -1,0 +1,25 @@
+{
+    "name": "com.mgs.gizmo",
+    "version": "1.0.0",
+    "displayName": "Gizmo",
+    "description": "Runtime Gizmo in Unity Scene.",
+    "unity": "2021.3",
+    "keywords": [
+        "gizmo",
+        "line",
+        "button",
+        "move"
+    ],
+    "author": {
+        "name": "Mogoson",
+        "email": "mogoson@outlook.com",
+        "url": "https://github.com/mogoson"
+    },
+    "samples": [
+        {
+            "displayName": "Sample",
+            "description": "Sample for gizmo preview",
+            "path": "Samples~/Sample"
+        }
+    ]
+}
