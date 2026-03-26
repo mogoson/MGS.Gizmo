@@ -16,18 +16,15 @@ namespace MGS.Gizmo
 {
     [AddComponentMenu("MGS/Gizmo/Line Gizmo")]
     [RequireComponent(typeof(LineRenderer))]
-    public class LineGizmo : Gizmo
+    public class LineGizmo : Gizmo<LineRenderer>
     {
-        [HideInInspector]
-        public LineRenderer lineRenderer;
-        public Transform start;
-        public Transform end;
+        public Transform startNode;
+        public Transform endNode;
 
         protected override void Reset()
         {
             base.Reset();
-            lineRenderer = GetComponent<LineRenderer>();
-            lineRenderer.positionCount = 2;
+            renderer.positionCount = 2;
         }
 
         protected override void UpdateGizmo()
@@ -38,33 +35,36 @@ namespace MGS.Gizmo
 
         protected void UpdateGizmoSize()
         {
-            var width = CalAdaptiveSize();
-            lineRenderer.startWidth = width;
-            lineRenderer.endWidth = width;
+            CalAdaptiveSize(out float startSize, out float endSize);
+            renderer.startWidth = startSize;
+            renderer.endWidth = endSize;
         }
 
         protected void UpdateLinePosition()
         {
-            if (start != null)
+            if (startNode)
             {
-                lineRenderer.SetPosition(0, start.position);
+                renderer.SetPosition(0, startNode.position);
             }
-            if (end != null)
+            if (endNode)
             {
-                lineRenderer.SetPosition(1, end.position);
+                renderer.SetPosition(1, endNode.position);
             }
         }
 
-        protected new float CalAdaptiveSize()
+        protected void CalAdaptiveSize(out float startSize, out float endSize)
         {
-            var pos = lineRenderer.GetPosition(0);
-            var minDis = Vector3.Distance(pos, renderCamera.transform.position);
+            startSize = endSize = 1.0f;
+            if (camera)
+            {
+                var pos = renderer.GetPosition(0);
+                var dis = Vector3.Distance(pos, camera.transform.position);
+                startSize = dis * visualSize;
 
-            pos = lineRenderer.GetPosition(1);
-            var dis = Vector3.Distance(pos, renderCamera.transform.position);
-
-            minDis = dis < minDis ? dis : minDis;
-            return minDis * visualSize;
+                pos = renderer.GetPosition(1);
+                dis = Vector3.Distance(pos, camera.transform.position);
+                endSize = dis * visualSize;
+            }
         }
     }
 }

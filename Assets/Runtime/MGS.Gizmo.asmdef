@@ -1,3 +1,14 @@
 {
-	"name": "MGS.Gizmo"
+    "name": "MGS.Gizmo",
+    "rootNamespace": "MGS.Gizmo",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

@@ -16,14 +16,21 @@ using UnityEngine;
 namespace MGS.Gizmo
 {
     [AddComponentMenu("MGS/Gizmo/Button Gizmo")]
-    public class ButtonGizmo : InteractGizmo
+    public class ButtonGizmo : HoverGizmo
     {
-        public event Action OnClick;
+        public event Action OnClickEvent;
 
         protected virtual void OnMouseUpAsButton()
         {
-            Debug.Log("OnMouseUpAsButton");
-            OnClick?.Invoke();
+            if (interactive)
+            {
+                OnClick();
+            }
+        }
+
+        protected virtual void OnClick()
+        {
+            OnClickEvent?.Invoke();
         }
     }
 }

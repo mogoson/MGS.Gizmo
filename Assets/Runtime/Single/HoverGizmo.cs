@@ -1,7 +1,7 @@
 /*************************************************************************
  *  Copyright © 2025 Mogoson All rights reserved.
  *------------------------------------------------------------------------
- *  File         :  InteractGizmo.cs
+ *  File         :  HoverGizmo.cs
  *  Description  :  Default.
  *------------------------------------------------------------------------
  *  Author       :  Mogoson
@@ -14,34 +14,49 @@ using UnityEngine;
 
 namespace MGS.Gizmo
 {
-    [AddComponentMenu("MGS/Gizmo/Interact Gizmo")]
-    [RequireComponent(typeof(Collider), typeof(Renderer))]
-    public class InteractGizmo : Gizmo
+    [AddComponentMenu("MGS/Gizmo/Hover Gizmo")]
+    [RequireComponent(typeof(Collider))]
+    public class HoverGizmo : Gizmo<Renderer>
     {
-        [HideInInspector]
-        public Renderer render;
+        public bool interactive = true;
         public Color normalColor = Color.white;
         public Color highlightColor = Color.yellow;
 
-        protected override void Reset()
+        protected override void Awake()
         {
-            base.Reset();
-            render = GetComponent<Renderer>();
+            base.Awake();
+            SetColor(normalColor);
         }
 
         protected virtual void OnMouseEnter()
         {
-            SetRendererColor(highlightColor);
+            if (interactive)
+            {
+                OnEnter();
+            }
         }
 
         protected virtual void OnMouseExit()
         {
-            SetRendererColor(normalColor);
+            if (interactive)
+            {
+                OnExit();
+            }
         }
 
-        protected void SetRendererColor(Color color)
+        protected virtual void OnEnter()
         {
-            render.sharedMaterial.color = color;
+            SetColor(highlightColor);
+        }
+
+        protected virtual void OnExit()
+        {
+            SetColor(normalColor);
+        }
+
+        public override void SetColor(Color color)
+        {
+            base.SetColor(color);
         }
     }
 }

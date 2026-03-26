@@ -16,35 +16,50 @@ using UnityEngine;
 namespace MGS.Gizmo
 {
     [AddComponentMenu("MGS/Gizmo/Move Gizmo")]
-    public class MoveGizmo : InteractGizmo
+    public class MoveGizmo : HoverGizmo
     {
-        protected float deep = 0;
+        public event Action<Vector3> OnMoveEvent;
+        protected float deep = 0f;
         protected Vector3 offset;
 
-        public event Action<Vector3> OnMove;
-
         protected virtual void OnMouseDown()
+        {
+            if (interactive)
+            {
+                OnDown();
+            }
+        }
+
+        protected virtual void OnMouseDrag()
+        {
+            if (interactive)
+            {
+                OnDrag();
+            }
+        }
+
+        protected virtual void OnDown()
         {
             deep = GetTransScreenPoint().z;
             offset = transform.position - GetMouseWorldPoint();
         }
 
-        protected virtual void OnMouseDrag()
+        protected virtual void OnDrag()
         {
             transform.position = offset + GetMouseWorldPoint();
-            OnMove?.Invoke(transform.position);
+            OnMoveEvent?.Invoke(transform.position);
         }
 
         protected Vector3 GetTransScreenPoint()
         {
-            return renderCamera.WorldToScreenPoint(transform.position);
+            return camera.WorldToScreenPoint(transform.position);
         }
 
         protected Vector3 GetMouseWorldPoint()
         {
             var msPos = Input.mousePosition;
             msPos.z = deep;
-            return renderCamera.ScreenToWorldPoint(msPos);
+            return camera.ScreenToWorldPoint(msPos);
         }
     }
 }
