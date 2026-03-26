@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5416079596488998324}
   - component: {fileID: 5416079596488998325}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: NodeIOTangentGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 5416079596743814865}
   - component: {fileID: 5416079596743814867}
   - component: {fileID: 5416079596743814866}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: LineGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 5416079597495350210}
   - component: {fileID: 5416079597495350212}
   - component: {fileID: 5416079597495350211}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: OutLineGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

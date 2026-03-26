@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 6620737040754238217, guid: 7aa6c386f76bc844393958923322e805, type: 3}
       propertyPath: camera
       value: 
-      objectReference: {fileID: 2137913579}
+      objectReference: {fileID: 963194227}
     - target: {fileID: 6620737040754238221, guid: 7aa6c386f76bc844393958923322e805, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -209,7 +209,7 @@ PrefabInstance:
     - target: {fileID: 8428402078499645417, guid: e3e213c4bfe62e646a041691c455f9ef, type: 3}
       propertyPath: camera
       value: 
-      objectReference: {fileID: 2137913579}
+      objectReference: {fileID: 963194227}
     - target: {fileID: 8428402078499645429, guid: e3e213c4bfe62e646a041691c455f9ef, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -342,7 +342,7 @@ PrefabInstance:
     - target: {fileID: 5998128786164437021, guid: 28c09f731eff0594e800e3133b7e2070, type: 3}
       propertyPath: camera
       value: 
-      objectReference: {fileID: 2137913579}
+      objectReference: {fileID: 963194227}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28c09f731eff0594e800e3133b7e2070, type: 3}
 --- !u!1 &705507993
@@ -496,7 +496,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -519,8 +519,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.99, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2137913578}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -534,7 +533,7 @@ PrefabInstance:
     - target: {fileID: 3206200219784400400, guid: 2093d486d8799c8468aac8bd43df407b, type: 3}
       propertyPath: camera
       value: 
-      objectReference: {fileID: 2137913579}
+      objectReference: {fileID: 963194227}
     - target: {fileID: 3206200219784400407, guid: 2093d486d8799c8468aac8bd43df407b, type: 3}
       propertyPath: m_Name
       value: ButtonGizmo
@@ -597,78 +596,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2093d486d8799c8468aac8bd43df407b, type: 3}
---- !u!1 &2137913577
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2137913578}
-  - component: {fileID: 2137913579}
-  m_Layer: 0
-  m_Name: GizmoCamera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2137913578
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137913577}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 963194228}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &2137913579
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137913577}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 3
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 64
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022

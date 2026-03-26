@@ -17,7 +17,6 @@ namespace MGS.Gizmo
     [ExecuteInEditMode]
     public class Gizmo<T> : MonoBehaviour where T : Renderer
     {
-        protected const string NAME_GIZMO_CAMERA = "GizmoCamera";
         public new Camera camera;
         public new T renderer;
         public float visualSize = 0.01f;
@@ -70,11 +69,6 @@ namespace MGS.Gizmo
         {
             if (Camera.main)
             {
-                var gizmoCam = Camera.main.transform.Find(NAME_GIZMO_CAMERA);
-                if (gizmoCam)
-                {
-                    return gizmoCam.GetComponent<Camera>();
-                }
                 return Camera.main;
             }
             return FindObjectOfType<Camera>();

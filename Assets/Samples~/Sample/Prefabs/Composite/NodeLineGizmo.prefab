@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7310239583776572978}
   - component: {fileID: 7310239583776572979}
   - component: {fileID: 7310239583776572976}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: StartNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7310239583776572981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.102079436, y: 0.102079436, z: 0.102079436}
+  m_LocalScale: {x: 0.10640963, y: 0.10640963, z: 0.10640963}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7310239583950236006}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  renderer: {fileID: 0}
+  renderer: {fileID: 7310239583776572978}
   visualSize: 0.01
   interactive: 1
   normalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 7310239583950236006}
   - component: {fileID: 7310239583950236007}
   - component: {fileID: 7310239583950235992}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: NodeLineGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,8 +193,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -1.795, y: 0, z: 0}
-  - {x: -0.79499996, y: 0, z: 0}
+  - {x: -3.5, y: 0, z: 0}
+  - {x: -2.5, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -203,7 +203,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.025153292
+        value: 0.026602408
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -212,7 +212,7 @@ LineRenderer:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.025153292
+        value: 0.025887992
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 7310239584974561332}
   - component: {fileID: 7310239584974561333}
   - component: {fileID: 7310239584974561330}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: EndNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ Transform:
   m_GameObject: {fileID: 7310239584974561335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.10080284, y: 0.10080284, z: 0.10080284}
+  m_LocalScale: {x: 0.10355197, y: 0.10355197, z: 0.10355197}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7310239583950236006}
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  renderer: {fileID: 0}
+  renderer: {fileID: 7310239584974561332}
   visualSize: 0.01
   interactive: 1
   normalColor: {r: 1, g: 1, b: 1, a: 1}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3895573699355780675}
   - component: {fileID: 3895573699355780674}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: NodeTangentGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 7292024860518519874}
   - component: {fileID: 7292024860518519875}
   - component: {fileID: 7292024860518519876}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: LineGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

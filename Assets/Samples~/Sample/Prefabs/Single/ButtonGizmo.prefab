@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3206200219784400402}
   - component: {fileID: 3206200219784400401}
   - component: {fileID: 3206200219784400400}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ButtonGizmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
